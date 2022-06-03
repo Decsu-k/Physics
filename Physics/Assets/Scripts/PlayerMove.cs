@@ -5,17 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMove : MonoBehaviour
 {
-    public Rigidbody2D rb;
+    public Transform player;
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        player.position = new Vector3(0, 2, 0);
     }
-
+    
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Respawn")
         {
             SceneManager.LoadScene(0);
         }
+    }
+    void OnGUI()
+    {
+        GUILayout.Label(transform.position.ToString());
     }
 }
