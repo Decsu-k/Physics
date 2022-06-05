@@ -15,6 +15,7 @@ public class PlayerMove : MonoBehaviour
     }
     public Transform player;
     public List<Position> positions = new List<Position>();
+
     void Start()
     {
         player.position = new Vector3(0, 2, 0);
@@ -40,12 +41,16 @@ public class PlayerMove : MonoBehaviour
         });
 
         var lastpos = positions[positions.Count - 2];
-
+        
         positions.Remove(lastpos);
 
-        print(positions[positions.Count - 1].x);
-        print(positions[positions.Count - 1].y);
-        print(positions[positions.Count - 1].z);
-        print(positions[positions.Count - 1].Date);
+        //print(positions[positions.Count - 1].x);
+        //print(positions[positions.Count - 1].y);
+        //print(positions[positions.Count - 1].z);
+        
+        Vector3 curPos = transform.position;
+        Vector3 prevPos = new Vector3(positions[positions.Count - 1].x, positions[positions.Count - 1].y, positions[positions.Count - 1].z);
+        Vector3 diffPos = curPos - prevPos;
+        print(diffPos);
     }
 }
