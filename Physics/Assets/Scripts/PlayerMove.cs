@@ -29,28 +29,7 @@ public class PlayerMove : MonoBehaviour
         }
     }
     void OnGUI()
-    {
-        GUILayout.Label(transform.position.ToString());
+    { 
 
-        positions.Add(new Position()
-        {
-            Date = DateTime.Now,
-            x = transform.position.x,
-            y = transform.position.y,
-            z = transform.position.z,
-        });
-
-        var lastpos = positions[positions.Count - 2];
-        
-        positions.Remove(lastpos);
-
-        //print(positions[positions.Count - 1].x);
-        //print(positions[positions.Count - 1].y);
-        //print(positions[positions.Count - 1].z);
-        
-        Vector3 curPos = transform.position;
-        Vector3 prevPos = new Vector3(positions[positions.Count - 1].x, positions[positions.Count - 1].y, positions[positions.Count - 1].z);
-        Vector3 diffPos = curPos - prevPos;
-        print(diffPos);
     }
 }

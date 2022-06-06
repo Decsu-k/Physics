@@ -509,6 +509,7 @@ MonoBehaviour:
   normalSpeed: 0
   moveRight: 275
   moveLeft: 276
+  ground: {fileID: 319683589}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
