@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System;
 
-public class PlayerMove : MonoBehaviour
+public class PlayerMove3 : MonoBehaviour
 {
     public class Position
     {
@@ -25,7 +25,7 @@ public class PlayerMove : MonoBehaviour
     {
         if (other.tag == "Respawn")
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(4);
         }
     }
     void OnGUI()
